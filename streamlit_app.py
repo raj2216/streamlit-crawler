@@ -57,13 +57,13 @@ if st.button("Analyze and Answer"):
 
                 docum = db.similarity_search(query, k=3)
                 deepseek = HuggingFaceEndpoint(repo_id='deepseek-ai/DeepSeek-Prover-V2-671B',
-                                                 provider='sambanova',
+                                                 provider='nebius',
                                                  temperature=0.5,
                                                  max_new_tokens=10,
                                                  task='conversational')
                 deep_seek = ChatHuggingFace(llm=deepseek,
                                              repo_id='deepseek-ai/DeepSeek-Prover-V2-671B',
-                                             provider='sambanova',
+                                             provider='nebius',
                                              temperature=0.5,
                                              max_new_tokens=10,
                                              task='conversational')
